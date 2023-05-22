@@ -61,7 +61,13 @@ class TodoList extends Component {
         </div>
         <div>preview: {newTodoTitle}</div>
         {items.map((item) => (
-          <TodoItem key={item.id} title={item.title} />
+          <TodoItem
+            key={item.id}
+            title={item.title}
+            onRemove={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
         ))}
       </div>
     );
